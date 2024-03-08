@@ -1,100 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Ресторан "Наша Кухня"</title>-->
-<!--    <style>-->
-<!--        body {-->
-<!--            font-family: Arial, sans-serif;-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--            background-color: #f5f5f5;-->
-<!--            color: #333;-->
-<!--        }-->
-<!--        header {-->
-<!--            background-color: #131111;-->
-<!--            color: #fff;-->
-<!--            padding: 20px 0; /* Увеличил отступы в шапке */-->
-<!--            text-align: center;-->
-<!--        }-->
-<!--        nav {-->
-<!--            background-color: #444;-->
-<!--            color: #fff;-->
-<!--            padding: 10px 0;-->
-<!--            text-align: center;-->
-<!--        }-->
-<!--        section {-->
-<!--            padding: 20px;-->
-<!--            background-color: #f0f0f0; /* Цвет фона для секций */-->
-<!--        }-->
-<!--        h1 {-->
-<!--            color: whitesmoke;-->
-<!--        }-->
-<!--        h2, h3 {-->
-<!--            color: #6b35cb;-->
-<!--        }-->
-<!--        ul {-->
-<!--            list-style-type: none;-->
-<!--            padding: 0;-->
-<!--        }-->
-<!--        li {-->
-<!--            display: inline;-->
-<!--            margin-right: 20px;-->
-<!--        }-->
-<!--        a {-->
-<!--            color: #fff;-->
-<!--            text-decoration: none;-->
-<!--        }-->
-<!--        .menu-item {-->
-<!--            border-bottom: 1px solid #ccc;-->
-<!--            padding: 10px 0;-->
-<!--        }-->
-<!--        .menu-item h3 {-->
-<!--            color: #1010d3;-->
-<!--        }-->
-<!--        .menu-item p {-->
-<!--            color: #d50e0e;-->
-<!--        }-->
-
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<header>-->
-<!--    <h1>Ресторан "Наша Кухня"</h1>-->
-<!--</header>-->
-<!--<nav>-->
-<!--    <ul>-->
-<!--        <li><a href="/">Главная</a></li>-->
-<!--        <li><a href="/menu">Меню</a></li>-->
-<!--        <li><a href="#about">О нас</a></li>-->
-<!--        <li><a href="#contact">Контакты</a></li>-->
-<!--        <li><a href="#reservation">Бронирование</a></li> &lt;!&ndash; Новая позиция меню &ndash;&gt;-->
-<!--    </ul>-->
-<!--</nav>-->
-<!--<section id="home" style="background-color: #e6ffe6;"> &lt;!&ndash; Цвет фона для секции "Добро пожаловать!" &ndash;&gt;-->
-<!--    <h2>Добро пожаловать!</h2>-->
-<!--    <p>Добро пожаловать на сайт ресторана "Наша Кухня". Мы рады приветствовать вас и предложить вам нашу вкусную кухню.</p>-->
-<!--</section>-->
-
-
-
-<!--<section id="about" style="background-color: #e0ffff;"> &lt;!&ndash; Цвет фона для секции "О нас" &ndash;&gt;-->
-<!--    <h2>О нас</h2>-->
-<!--    <p>Ресторан "Наша Кухня" предлагает широкий выбор блюд, приготовленных только из свежих и качественных ингредиентов. Мы стремимся удовлетворить вкус каждого клиента.</p>-->
-<!--</section>-->
-<!--<section id="contact" style="background-color: #ffe4b5;"> &lt;!&ndash; Цвет фона для секции "Контакты" &ndash;&gt;-->
-<!--    <h2>Контакты</h2>-->
-<!--    <p>Адрес: ул. Харовюк , д.10</p>-->
-<!--    <p>Телефон: +123456789</p>-->
-<!--    <p>Email: info@restaurant.com</p>-->
-<!--</section>-->
-<!--<section id="reservation" style="background-color: #f0f8ff;"> &lt;!&ndash; Цвет фона для секции "Бронирование" &ndash;&gt;-->
-<!--    <h2>Бронирование</h2>-->
-<!--    <p>Забронируйте столик прямо сейчас!</p>-->
-<!--</section>-->
-<!--</body>-->
-<!--</html>-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -109,8 +12,6 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
-            min-height: 100vh; /* Установка минимальной высоты для того, чтобы футер всегда был внизу страницы */
-            position: relative; /* Позиционирование элементов относительно этого контейнера */
         }
         header {
             background-color: #131111;
@@ -145,6 +46,10 @@
         a {
             color: #fff;
             text-decoration: none;
+            transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
+        }
+        a:hover {
+            background-color: #0c0c0c; /* Цвет фона при наведении */
         }
         .menu-item {
             border-bottom: 1px solid #ccc;
@@ -161,14 +66,11 @@
             color: #0c0c0c;
             padding: 20px 0;
             text-align: center;
-            position: absolute; /* Фиксированное позиционирование */
-            bottom: 0; /* Размещение футера внизу страницы */
-            width: 100%; /* Ширина футера равна ширине страницы */
         }
-        .home {
+        .dobro{
             text-align: center;
         }
-        .image{
+        .paragraf{
             text-align: center;
         }
     </style>
@@ -185,23 +87,27 @@
         <li><a href="#reservation">Бронирование</a></li> <!-- Новая позиция меню -->
     </ul>
 </nav>
-<section class="home" id="home" style="background-color: #e6ffe6;"> <!-- Цвет фона для секции "Добро пожаловать!" -->
-    <h2>Добро пожаловать!</h2>
-    <p>Добро пожаловать на сайт ресторана "Наша Кухня". Мы рады приветствовать вас и предложить вам нашу вкусную кухню.</p>
+<section class="home" id="home" style="background-color: #e6ffe6;">
+    <h2 class="dobro">Добро пожаловать!</h2>
+    <p class="paragraf">Добро пожаловать на сайт ресторана "Наша Кухня". Мы рады приветствовать вас и предложить вам нашу вкусную кухню.</p>
 </section>
 <section class="image">
     <img src="/image/nameLogo.jpg">
 </section>
 
 <footer>
-    <section id="contact" style="background-color: #e7e4e4;"> <!-- Цвет фона для секции "Контакты" -->
+    <section id="contact" style="background-color: #e7e4e4;">
         <h2>Контакты</h2>
         <p>Адрес: ул. Харовюк, д.10</p>
         <p>Телефон: +123456789</p>
         <p>Email: info@restaurant.com</p>
     </section>
 </footer>
+
 </body>
 </html>
+
+
+
 
 
