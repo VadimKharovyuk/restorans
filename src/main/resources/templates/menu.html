@@ -1,3 +1,4 @@
+
 <!--<!DOCTYPE html>-->
 <!--<html lang="en">-->
 <!--<head>-->
@@ -24,6 +25,7 @@
 <!--            color: #fff;-->
 <!--            padding: 10px 0;-->
 <!--            text-align: center;-->
+<!--            transition: background-color 0.5s; /* Добавляем переход для изменения цвета фона */-->
 <!--        }-->
 <!--        section {-->
 <!--            text-align: center;-->
@@ -70,7 +72,7 @@
 <!--<header>-->
 <!--    <h1>Ресторан "Наша Кухня"</h1>-->
 <!--</header>-->
-<!--<nav>-->
+<!--<nav id="mainNav">-->
 <!--    <ul>-->
 <!--        <li><a href="/">Главная</a></li>-->
 <!--        <li><a href="/menu">Меню</a></li>-->
@@ -120,8 +122,25 @@
 <!--        <p>Email: info@restaurant.com</p>-->
 <!--    </section>-->
 <!--</footer>-->
+
+<!--<script>-->
+<!--    // Список цветов для анимации-->
+<!--    var colors = ['#FF5733', '#FFBD33', '#0c0c0c', '#339AFF', '#E233FF'];-->
+
+<!--    var nav = document.getElementById('mainNav');-->
+
+<!--    // Функция для изменения цвета фона с задержкой-->
+<!--    function changeNavColor() {-->
+<!--        var randomColor = colors[Math.floor(Math.random() * colors.length)];-->
+<!--        nav.style.backgroundColor = randomColor;-->
+<!--    }-->
+
+<!--    // Вызываем функцию каждые 1.5 секунды-->
+<!--    setInterval(changeNavColor, 3500);-->
+<!--</script>-->
 <!--</body>-->
 <!--</html>-->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -151,6 +170,7 @@
             text-align: center;
             transition: background-color 0.5s; /* Добавляем переход для изменения цвета фона */
         }
+
         section {
             text-align: center;
             padding: 20px;
