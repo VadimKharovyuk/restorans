@@ -9,10 +9,7 @@ public class MainController {
     public String home(){
         return "home";
     }
-    @GetMapping("/menu")
-    public String menu(){
-        return "menu";
-    }
+
     @GetMapping("/history")
     public String  histoty (){
         return "history";
