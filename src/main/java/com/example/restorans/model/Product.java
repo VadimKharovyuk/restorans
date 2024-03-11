@@ -44,4 +44,10 @@ public class Product {
     private PervieBludo pervieBludo ;
 
 
+
+    @ManyToOne
+    @JoinColumn(name = "ChildrenEat id")
+    private ChildrenEat childrenEat ;
+
+
 }
