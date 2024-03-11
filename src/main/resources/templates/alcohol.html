@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню алкоголя</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+        }
+        button:hover {
+            background-color: #45a049;
+            color: white;
+        }
+        .menu_alko{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2 class="menu_alko">Меню алкоголя</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Заказать</th>
+    </tr>
+    </thead>
+
+    <!-- Здесь будет генерироваться содержимое с помощью Thymeleaf -->
+    <tbody>
+    <!-- Используем Thymeleaf для динамической загрузки данных из контроллера -->
+<!--    <tr th:each="coffee : ${coffees}">-->
+<!--        <td th:text="${coffee.name}"></td>-->
+<!--        <td th:text="${coffee.description}"></td>-->
+<!--        <td th:text="${coffee.price}"></td>-->
+<!--        <td>-->
+<!--            <form th:action="@{/order}" method="post">-->
+<!--                <input type="hidden" th:name="coffeeId" th:value="${coffee.id}">-->
+<!--                <button type="submit">Заказать</button>-->
+<!--            </form>-->
+<!--        </td>-->
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>

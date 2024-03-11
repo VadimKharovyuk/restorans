@@ -22,4 +22,10 @@ public class MenuController {
         model.addAttribute("coffees",menuItemRepository.findAll());
         return "coffee";
     }
+
+    @GetMapping("/menu/alcohol")
+    public String alcohol(Model model){
+        model.addAttribute("coffees",menuItemRepository.findAll());
+        return "alcohol";
+    }
 }
