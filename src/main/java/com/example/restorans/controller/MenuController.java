@@ -3,6 +3,7 @@ package com.example.restorans.controller;
 import com.example.restorans.repository.AlcoholRepository;
 import com.example.restorans.repository.CoffeeRepository;
 import com.example.restorans.repository.DessertRepository;
+import com.example.restorans.repository.PervieBludoRepositoty;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ public class MenuController {
     private final CoffeeRepository coffeeRepository;
     private final AlcoholRepository alcoholRepository;
     private final DessertRepository dessertRepository;
+    private final PervieBludoRepositoty pervieBludoRepositoty;
 
 
     @GetMapping("/menu")
@@ -37,5 +39,10 @@ public class MenuController {
         model.addAttribute("dessert",dessertRepository.findAll());
         return "dessert";
 
+    }
+    @GetMapping("/menu/pervieBludo")
+    public String PervieBludo (Model model){
+        model.addAttribute("pervieBludo",pervieBludoRepositoty.findAll());
+        return "pervieBludo";
     }
 }

@@ -21,7 +21,7 @@ public class Product {
 
 
     @ManyToOne
-    @JoinColumn(name = "Alcohol_id")
+    @JoinColumn(name = "alcohol_id")
     private Alcohol alcohol;
 
 
@@ -33,4 +33,15 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "coffee id")
     private Coffee coffee ;
+
+    @ManyToOne
+    @JoinColumn(name = "dessert id")
+    private Dessert dessert;
+
+
+    @ManyToOne
+    @JoinColumn(name = "pervieBludo id")
+    private PervieBludo pervieBludo ;
+
+
 }
