@@ -1,9 +1,9 @@
 package com.example.restorans.repository;
 
-import com.example.restorans.model.Product;
+import com.example.restorans.model.Alcohol;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MenuItemRepository extends JpaRepository<Product,Long> {
+public interface AlcoholRepository  extends JpaRepository<Alcohol,Long> {
 }

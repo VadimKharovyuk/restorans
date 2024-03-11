@@ -4,42 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меню алкоголя</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-        }
-        button:hover {
-            background-color: #45a049;
-            color: white;
-        }
-        .menu_alko{
-            text-align: center;
-        }
-    </style>
+
+ <style>
+     <style>
+     table {
+         border-collapse: collapse;
+         width: 100%;
+     }
+     th, td {
+         border: 1px solid #dddddd;
+         text-align: left;
+         padding: 8px;
+     }
+     tr:nth-child(even) {
+         background-color: #f2f2f2;
+     }
+     button {
+         background-color: #4CAF50;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         transition-duration: 0.4s;
+     }
+     button:hover {
+         background-color: #45a049;
+         color: white;
+     }
+     body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f5f5f5;
+         color: #333;
+     }
+     header {
+         background-color: #131111;
+         color: #fff;
+         padding: 10px 5px; /* Увеличил отступы в шапке */
+         text-align: center;
+     }
+     nav {
+         background-color: #444;
+         color: #fff;
+         padding: 10px 0;
+         text-align: center;
+         transition: background-color 0.5s; /* Добавляем переход для изменения цвета фона */
+     }
+
+     section {
+         /*text-align: center;*/
+         padding: 20px;
+         margin-left: 100px;
+         background-color: #f0f0f0; /* Цвет фона для секций */
+     }
+     h2, h3 {
+         color: #6b35cb;
+     }
+     h1{
+         color:whitesmoke;
+     }
+     ul {
+         list-style-type: none;
+         padding: 0;
+     }
+     li {
+         display: inline;
+         margin-right: 20px;
+     }
+     a {
+         color: #fff;
+         text-decoration: none;
+     }
+
+     .menu-item h3 {
+         color: #1010d3;
+     }
+     .menu-item p {
+         color: #0a0a0a;
+     }
+     footer {
+         background-color: #eeeaea; /* Цвет фона для футера */
+         color: #0a0a0a;
+         padding: 20px 0;
+         text-align: center;
+     }
+     a:hover {
+         background-color: #111111; /* Цвет фона при наведении */
+         color: #15e37d;
+     }
+     .menu_alko{
+         text-align: center;
+     }
+ </style>
+ </style>
 </head>
+<nav id="mainNav">
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/menu">Меню</a></li>
+        <li><a href="/history">История</a></li> <!-- Добавленная ссылка на страницу с историей -->
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
 <body>
 <h2 class="menu_alko">Меню алкоголя</h2>
 <table>
@@ -54,17 +127,16 @@
 
     <!-- Здесь будет генерироваться содержимое с помощью Thymeleaf -->
     <tbody>
-    <!-- Используем Thymeleaf для динамической загрузки данных из контроллера -->
-<!--    <tr th:each="coffee : ${coffees}">-->
-<!--        <td th:text="${coffee.name}"></td>-->
-<!--        <td th:text="${coffee.description}"></td>-->
-<!--        <td th:text="${coffee.price}"></td>-->
-<!--        <td>-->
-<!--            <form th:action="@{/order}" method="post">-->
-<!--                <input type="hidden" th:name="coffeeId" th:value="${coffee.id}">-->
-<!--                <button type="submit">Заказать</button>-->
-<!--            </form>-->
-<!--        </td>-->
+    <tr th:each="coffee : ${coffees}">
+        <td th:text="${coffee.name}"></td>
+        <td th:text="${coffee.description}"></td>
+        <td th:text="${coffee.price}"></td>
+        <td>
+            <form th:action="@{/order}" method="post">
+                <input type="hidden" th:name="coffeeId" th:value="${coffee.id}">
+                <button type="submit">Заказать</button>
+            </form>
+        </td>
     </tr>
 
     </tbody>
