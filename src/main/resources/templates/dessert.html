@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню кофе</title>
+    <title>Меню алкоголя</title>
+
     <style>
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -17,7 +19,7 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        button {
+       .nazad {
             background-color: #4CAF50;
             color: white;
             padding: 10px 20px;
@@ -97,7 +99,7 @@
             background-color: #111111; /* Цвет фона при наведении */
             color: #15e37d;
         }
-        .coffe_menu{
+        .menu_desert{
             text-align: center;
         }
         button {
@@ -137,6 +139,7 @@
             transform: translateX(15em);
         }
     </style>
+
 </head>
 <nav id="mainNav">
     <ul>
@@ -146,10 +149,8 @@
         <li><a href="#contact">Контакты</a></li>
     </ul>
 </nav>
-
-
 <body>
-<h2 class="coffe_menu">Меню кофе</h2>
+<h2 class="menu_desert">Меню Десертов</h2>
 <table>
     <thead>
     <tr>
@@ -159,22 +160,24 @@
         <th>Заказать</th>
     </tr>
     </thead>
+
+    <!-- Здесь будет генерироваться содержимое с помощью Thymeleaf -->
     <tbody>
-    <!-- Используем Thymeleaf для динамической загрузки данных из контроллера -->
-    <tr th:each="coffee : ${coffees}">
-        <td th:text="${coffee.name}"></td>
-        <td th:text="${coffee.description}"></td>
-        <td th:text="${coffee.price}"></td>
+    <tr th:each="desert : ${dessert}">
+        <td th:text="${desert.name}"></td>
+        <td th:text="${desert.description}"></td>
+        <td th:text="${desert.price}"></td>
         <td>
             <form th:action="@{/order}" method="post">
-                <input type="hidden" th:name="coffeeId" th:value="${coffee.id}">
+                <input type="hidden" th:name="desertId" th:value="${desert.id}">
                 <button type="submit">Заказать</button>
             </form>
         </td>
     </tr>
+
     </tbody>
 </table>
 <br>
-<a href="/menu"><button class="nazad">Перейти в меню </button></a>
+<a href="/menu"><button >Перейти в меню </button></a>
 </body>
 </html>
