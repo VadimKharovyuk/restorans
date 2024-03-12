@@ -22,8 +22,7 @@ public class Basket {
     private String name;
     private BigDecimal price;
 
-    @OneToMany(mappedBy = "basket")
-    private List<Product> products ;
+
 
 
 

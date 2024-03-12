@@ -1,19 +1,25 @@
 package com.example.restorans.controller;
 
+import com.example.restorans.model.Basket;
+import com.example.restorans.model.Coffee;
 import com.example.restorans.repository.*;
+import com.example.restorans.service.BasketService;
+import com.example.restorans.service.CoffeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @AllArgsConstructor
 public class MenuController {
-    private final CoffeeRepository coffeeRepository;
+    private final CoffeeService coffeeService ;
     private final AlcoholRepository alcoholRepository;
     private final DessertRepository dessertRepository;
     private final PervieBludoRepositoty pervieBludoRepositoty;
     private final ChildrenEatRepository childrenEatRepository;
+    private final BasketService basketService ;
+
 
 
     @GetMapping("/menu")
@@ -23,7 +29,7 @@ public class MenuController {
 
     @GetMapping("/menu/coffee")
     public String coffee(Model model){
-        model.addAttribute("coffees", coffeeRepository.findAll());
+        model.addAttribute("coffees", coffeeService.findAll(new Coffee()));
         return "coffee";
     }
 
@@ -49,4 +55,30 @@ public class MenuController {
         model.addAttribute("childrenEat",childrenEatRepository.findAll());
         return "childrenEat";
     }
+
+    @GetMapping("/mylist")
+    public String basket(Model model){
+        model.addAttribute("order",basketService.findAllBasketList(new Basket()));
+        return "basketList";
+    }
+
+
+
+    @RequestMapping("/mylist/{id}")
+    public String getMybasketList(@PathVariable (name = "id") Long id) {
+         Coffee coffee = coffeeService.getCoffeeById(id);
+         Basket basketlist=new Basket(coffee.getId(),coffee.getName(),coffee.getPrice());
+         basketService.saveMyorder(basketlist);
+        return "basketList";
+
+    }
+
+    @RequestMapping("/deleteMyList/{id}")
+    public String deleteMyListById(@PathVariable (name = "id") Long id){
+       coffeeService.deleteById(id);
+        return "coffee";
+
+    }
+
+
 }
