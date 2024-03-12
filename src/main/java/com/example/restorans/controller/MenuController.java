@@ -73,9 +73,9 @@ public class MenuController {
 
     }
 
-    @RequestMapping("/deleteMyList/{id}")
+  @RequestMapping("/deleteMyList/{id}")
     public String deleteMyListById(@PathVariable (name = "id") Long id){
-       coffeeService.deleteById(id);
+      basketService.deleteById(id);
         return "coffee";
 
     }

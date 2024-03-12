@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 @AllArgsConstructor
@@ -21,7 +22,7 @@ public class CoffeeService {
         return coffeeRepository.findAll();
     }
     public Coffee getCoffeeById( Long id){
-        return coffeeRepository.findById(id).get();
+        return coffeeRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Coffee with id " + id + " not found"));
     }
     public void deleteById(Long id){
         coffeeRepository.deleteById(id);
