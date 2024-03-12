@@ -2,6 +2,7 @@ package com.example.restorans.controller;
 
 import com.example.restorans.model.Basket;
 import com.example.restorans.model.Coffee;
+import com.example.restorans.model.PervieBludo;
 import com.example.restorans.repository.*;
 import com.example.restorans.service.BasketService;
 import com.example.restorans.service.CoffeeService;
@@ -67,8 +68,11 @@ public class MenuController {
     @RequestMapping("/mylist/{id}")
     public String getMybasketList(@PathVariable (name = "id") Long id) {
          Coffee coffee = coffeeService.getCoffeeById(id);
+        PervieBludo pervieBludo =pervieBludoRepositoty.getReferenceById(id);
          Basket basketlist=new Basket(coffee.getId(),coffee.getName(),coffee.getPrice());
+         Basket basketPervoeBludoList =new Basket(pervieBludo.getId(),pervieBludo.getName(),pervieBludo.getPrice());
          basketService.saveMyorder(basketlist);
+         basketService.saveMyorder(basketPervoeBludoList);
         return "basketList";
 
     }

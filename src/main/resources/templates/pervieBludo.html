@@ -171,10 +171,8 @@
         <td th:text="${pervieBludo.description}"></td>
         <td th:text="${pervieBludo.price}"></td>
         <td>
-            <form th:action="@{/order}" method="post">
-                <input type="hidden" th:name="PervieBludoId" th:value="${pervieBludo.id}">
-                <button type="submit">Заказать</button>
-            </form>
+            <a class="btn bnt-secondary btn-sm" th:href="@{/mylist/{id}(id=${pervieBludo.id})}"> <h5 style="color: #1414d9">Добавить в корзину</h5></a>
+
         </td>
     </tr>
 
