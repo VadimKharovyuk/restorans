@@ -57,6 +57,9 @@ public class MenuController {
         return "childrenEat";
     }
 
+
+
+
     @GetMapping("/mylist")
     public String basket(Model model){
         model.addAttribute("order",basketService.findAllBasketList(new Basket()));
@@ -73,14 +76,14 @@ public class MenuController {
          Basket basketPervoeBludoList =new Basket(pervieBludo.getId(),pervieBludo.getName(),pervieBludo.getPrice());
          basketService.saveMyorder(basketlist);
          basketService.saveMyorder(basketPervoeBludoList);
-        return "basketList";
+        return "redirect:/menu";
 
     }
 
   @RequestMapping("/deleteMyList/{id}")
     public String deleteMyListById(@PathVariable (name = "id") Long id){
       basketService.deleteById(id);
-        return "coffee";
+      return "redirect:/menu";
 
     }
 
