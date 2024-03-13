@@ -19,7 +19,6 @@ public class MenuController {
     private final DessertRepository dessertRepository;
     private final PervieBludoRepositoty pervieBludoRepositoty;
     private final ChildrenEatRepository childrenEatRepository;
-    private final BasketService basketService ;
 
 
 
@@ -57,35 +56,6 @@ public class MenuController {
         return "childrenEat";
     }
 
-
-
-
-    @GetMapping("/mylist")
-    public String basket(Model model){
-        model.addAttribute("order",basketService.findAllBasketList(new Basket()));
-        return "basketList";
-    }
-
-
-
-    @RequestMapping("/mylist/{id}")
-    public String getMybasketList(@PathVariable (name = "id") Long id) {
-         Coffee coffee = coffeeService.getCoffeeById(id);
-        PervieBludo pervieBludo =pervieBludoRepositoty.getReferenceById(id);
-         Basket basketlist=new Basket(coffee.getId(),coffee.getName(),coffee.getPrice());
-         Basket basketPervoeBludoList =new Basket(pervieBludo.getId(),pervieBludo.getName(),pervieBludo.getPrice());
-         basketService.saveMyorder(basketlist);
-         basketService.saveMyorder(basketPervoeBludoList);
-        return "redirect:/menu";
-
-    }
-
-  @RequestMapping("/deleteMyList/{id}")
-    public String deleteMyListById(@PathVariable (name = "id") Long id){
-      basketService.deleteById(id);
-      return "redirect:/menu";
-
-    }
 
 
 }
