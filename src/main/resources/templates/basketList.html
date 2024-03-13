@@ -170,15 +170,14 @@
             <td th:text="${orders.price}"></td>
             <td><a style="color: #d50e0e" th:href="@{/deleteMyList/{id}(id=${orders.id})}"><i class="fa-solid fa-trash me-4"></i></a>
 
-
             </td>
-            <!--            <script src="https://kit.fontawesome.com/0faddc1af8.js" crossorigin="anonymous"></script>-->
-
         </tr>
-
-
         </tbody>
     </table>
+
+    <div>
+        <h3>Общая стоимость заказов: <span th:text="${totalCost}"></span> грн</h3>
+    </div>
 </div>
 
 
