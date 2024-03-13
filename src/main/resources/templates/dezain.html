@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карусель</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        header {
+            background-color: #131111;
+            color: #fff;
+            padding: 10px 5px;
+            text-align: center;
+        }
+        nav {
+            background-color: #99a8d5;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+        h2, h3 {
+            color: #6b35cb;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
+        }
+        a:hover {
+            background-color: #d7caca; /* Цвет фона при наведении */
+            color: #15e37d;
+
+        }
+        .menu-item h3 {
+            color: #1010d3;
+        }
+        .menu-item p {
+            color: #d50e0e;
+        }
+        footer {
+            background-color: #efefef;
+            color: #0c0c0c;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<nav id="mainNav">
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/menu">Меню</a></li>
+        <li><a href="/history">История</a></li> <!-- Добавленная ссылка на страницу с историей -->
+        <li><a href="#contact">Контакты</a></li>
+        <li><a href="/dezaint">Дизайн Ресторана</a></li>
+        <li><a href="/mylist">Корзина</a></li>
+    </ul>
+</nav>
+<body>
+
+
+<div class="container mt-5">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Индикаторы -->
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ul>
+
+        <!-- Слайды -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/image/caruselLogo.jpg" alt="Первый слайд" style="width:100%;">
+            </div>
+            <div class="carousel-item">
+                <img src="/image/caruselLogo.1.jpg" alt="Второй слайд" style="width:100%;">
+            </div>
+            <div class="carousel-item">
+                <img src="/image/caruselLogo.2.jpg" alt="Третий слайд" style="width:100%;">
+            </div>
+            <div class="carousel-item">
+                <img src="/image/caruselLogo3.jpg" alt="Четвертый слайд" style="width:100%;">
+            </div>
+            <div class="carousel-item">
+                <img src="/image/caruselLogo4jpg.jpg" alt="Пятый слайд" style="width:100%;">
+            </div>
+            <div class="carousel-item">
+                <img src="/image/caruselLogo5.jpg" alt="Шестой слайд" style="width:100%;">
+            </div>
+        </div>
+
+        <!-- Стрелки -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
