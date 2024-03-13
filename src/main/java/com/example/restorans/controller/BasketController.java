@@ -2,6 +2,7 @@ package com.example.restorans.controller;
 
 import com.example.restorans.model.*;
 import com.example.restorans.repository.AlcoholRepository;
+import com.example.restorans.repository.ChildrenEatRepository;
 import com.example.restorans.repository.DessertRepository;
 import com.example.restorans.repository.PervieBludoRepositoty;
 import com.example.restorans.service.BasketService;
@@ -21,6 +22,7 @@ public class BasketController {
     private final PervieBludoRepositoty pervieBludoRepositoty;
     private final DessertRepository dessertRepository;
     private final AlcoholRepository alcoholRepository;
+    private final ChildrenEatRepository childrenEatRepository;
 
 
 
@@ -73,6 +75,15 @@ public class BasketController {
         return "redirect:/menu";
 
     }
+    //детское питание
+    @RequestMapping("/mylist/childredEat/{id}")
+    public String addBusketChildrenFood(@PathVariable (name = "id") Long id){
+        ChildrenEat childrenEat = childrenEatRepository.getReferenceById(id);
+        Basket basketChildrenFood = new Basket(childrenEat.getId(),childrenEat.getName(),childrenEat.getPrice());
+        basketService.saveMyorder(basketChildrenFood);
+        return "redirect:/menu";
+    }
+
 
 
 
