@@ -35,7 +35,7 @@ public class MenuController {
 
     @GetMapping("/menu/alcohol")
     public String alcohol(Model model){
-        model.addAttribute("coffees", alcoholRepository.findAll());
+        model.addAttribute("alcohol", alcoholRepository.findAll());
         return "alcohol";
     }
     @GetMapping("/menu/dessert")
