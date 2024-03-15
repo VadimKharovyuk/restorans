@@ -14,4 +14,8 @@ public class MainController {
     public String  histoty (){
         return "history";
     }
+    @GetMapping("/paralax")
+    public String paralax(){
+        return "paralax";
+    }
 }

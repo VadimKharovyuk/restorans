@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scroll Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .parallax-container {
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease-in-out;
+        }
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .parallax {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+        }
+         body {
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+             background-color: #f5f5f5;
+             color: #333;
+         }
+        header {
+            background-color: #131111;
+            color: #fff;
+            padding: 10px 5px;
+            text-align: center;
+        }
+        nav {
+            background-color: #01030a;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+        h2, h3 {
+            color: #edeaf1;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
+        }
+        a:hover {
+            background-color: #111111; /* Цвет фона при наведении */
+            color: #15e37d;
+
+        }
+        .menu-item h3 {
+            color: #1010d3;
+        }
+        .menu-item p {
+            color: #d50e0e;
+        }
+        footer {
+            background-color: #333;
+            color: #0c0c0c;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<nav>
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/menu">Меню</a></li>
+        <li><a href="/history">История</a></li>
+        <li><a href="/dezain">Интерьер</a></li>
+        <li><a href="/paralax">Paralax</a></li>
+        <li><a href="#contact">Контакты</a></li>
+
+    </ul>
+</nav>
+<body>
+<div class="parallax-container">
+    <div class="parallax-img" style="background-image: url('/image/barparalax.jpg');"></div>
+    <div class="parallax-content">
+        <h3 style="text-align: center">Ласкаво просимо до ресторану  – вашого унікального оазису смаку та насолоди!
+            За кожними дверима нашого закладу вас чекає атмосфера, що переповнена ароматами і смаками з усіх куточків світу.</h3>
+    </div>
+</div>
+<div class="parallax">
+    <h4>Наш ресторан розташований у самому серці міста, в елегантному і сучасному просторі, який поєднує в собі класичну елегантність та сучасний шарм.
+        Він пропонує яскраву колекцію стильних інтер'єрних рішень, які створюють неповторний атмосферний вигляд.</h4>
+</div>
+<div class="parallax-container">
+    <div class="parallax-img" style="background-image: url('/image/paralax2.jpg')"></div>
+    <div class="parallax-content">
+<!--        <p>Наше меню - це справжній шедевр смаку, де кожна страва створена з увагою до деталей та використанням найсвіжіших інгредієнтів від найкращих постачальників.</p>-->
+<!--        <p>Від класичних страв світової кухні до авторських шедеврів наших шеф-кухарів, ми гарантуємо вам незабутні враження на кожному ковтку.</p>-->
+    </div>
+
+</div>
+<div class="parallax">
+    <h4>Погрузіться в атмосферу неперевершеної кулінарної елегантності у ресторані "Сонячна Тераса". Розташований на вершині висотного будівля, цей ресторан пропонує захоплюючий вид на місто та мальовничі заходи сонця. Вишукане меню, створене витонченим шеф-кухарем, подарує вам незабутній смаковий досвід, де кожен страва - справжнє творіння мистецтва. Обслуговування на рівні вищих стандартів і вишуканий інтер'єр роблять цей ресторан ідеальним місцем для особливих подій та романтичних вечорів.</h4>
+</div>
+<div class="parallax-container">
+    <div class="parallax-img" style="background-image: url('/image/paralax3.jpg');"></div>
+    <div class="parallax-content">
+        <p></p>
+    </div>
+</div>
+<div class="parallax">
+    <h4 style="text-align: center" >
+        <p>Наше меню - це справжній шедевр смаку, де кожна страва створена з увагою до деталей та використанням найсвіжіших інгредієнтів від найкращих постачальників.</p>
+        <p>Від класичних страв світової кухні до авторських шедеврів наших шеф-кухарів, ми гарантуємо вам незабутні враження на кожному ковтку.</p> </h4>
+</div>
+<div class="parallax-container">
+    <div class="parallax-img" style="background-image: url('/image/paralax4.jpg');"></div>
+    <div class="parallax-content">
+    </div>
+    <div class="parallax">
+        <h4>Интимна атмосфера, де володарює спокій та комфорт, створить ідеальні умови для насолоди найсвіжішими морськими дарами.
+            Шеф-кухарі майстерно готують кожну страву, дбаючи про те, щоб кожен ковток переносив вас до берегів екзотичних країн.</h4>
+    </div>
+</div>
+<footer>
+    <section id="contact" style="background-color: #e7e4e4;">
+        <h2 style="color: #0c0c0c"> Контакты</h2>
+        <p>Адрес: ул. Харовюк, д.10</p>
+        <p>Телефон: +123456789</p>
+        <p>Email: info@restaurant.com</p>
+    </section>
+</footer>
+</body>
+</html>
