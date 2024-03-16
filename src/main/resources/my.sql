@@ -8,6 +8,7 @@ CREATE TABLE alcohol (
 
 CREATE TABLE basket (
                         id BIGSERIAL NOT NULL,
+                        description VARCHAR(255),
                         name VARCHAR(255),
                         price NUMERIC(38,2),
                         PRIMARY KEY (id)
