@@ -15,7 +15,7 @@
         header {
             background-color: #131111;
             color: #fff;
-            padding: 10px 5px; /* Увеличил отступы в шапке */
+            padding: 10px 5px;
             text-align: center;
         }
         nav {
@@ -26,13 +26,13 @@
         }
         section {
             padding: 20px;
-            background-color: #f0f0f0; /* Цвет фона для секций */
+            background-color: #f0f0f0;
         }
         h1 {
-            color: whitesmoke;
+            color: aquamarine;
         }
         h2, h3 {
-            color: #6b35cb;
+            color: #1414d9;
         }
         ul {
             list-style-type: none;
@@ -57,28 +57,45 @@
             color: #0a0a0a;
         }
         a:hover {
-            background-color: #111111; /* Цвет фона при наведении */
+            background-color: #111111;
             color: #15e37d;
-
         }
 
         footer {
-            background-color: #eeeaea; /* Цвет фона для футера */
+            background-color: #eeeaea;
             color: #0a0a0a;
             padding: 20px 0;
             text-align: center;
-            position: fixed; /* Фиксированное позиционирование */
-            bottom: 0; /* Размещение футера внизу страницы */
-            width: 100%; /* Ширина футера равна ширине страницы */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
         .histori{
             text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 300px; /* Змінив розмір фотографій */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .gallery img {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 <header>
-    <h1 style="color: aquamarine">Ресторан "Наша Кухня"</h1>
+    <h1>Ресторан "Наша Кухня"</h1>
 </header>
 <nav>
     <ul>
@@ -104,15 +121,27 @@
 
         С гордостью мы продолжаем радовать наших гостей изысканными блюдами, созданными с любовью и заботой.<br>
         Наш ресторан - это не просто место, где можно поесть, это место, где забота о гостях становится на первое место. <br>
-        </p>
+    </p>
 </section>
-<footer>
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Адрес: ул. Харовюк, д.10</p>
-        <p>Телефон: +123456789</p>
-        <p>Email: info@restaurant.com</p>
-    </section>
-</footer>
+
+<div class="gallery">
+    <img src="/image/history1.jpg" alt="Image 1">
+    <img src="/image/history2.jpg" alt="Image 2">
+    <img src="/image/history3.jpg" alt="Image 3">
+    <img src="/image/history4.jpg" alt="Image 4">
+    <img src="/image/history5.jpg" alt="Image 5">
+    <img src="/image/history6.jpg" alt="Image 6">
+    <img src="/image/history7.jpg" alt="Image 7">
+    <img src="/image/histor8.jpg" alt="Image 8">
+</div>
+
+<!--<footer>-->
+<!--    <section id="contact">-->
+<!--        <h2>Контакты</h2>-->
+<!--        <p>Адрес: ул. Харовюк, д.10</p>-->
+<!--        <p>Телефон: +123456789</p>-->
+<!--        <p>Email: info@restaurant.com</p>-->
+<!--    </section>-->
+<!--</footer>-->
 </body>
 </html>
