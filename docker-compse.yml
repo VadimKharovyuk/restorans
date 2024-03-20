@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .idea
+    image: restorans-app:latest
+    ports:
+      - "8500:8500"
+    environment:
+      - DATABASE_URL=postgresql://postgres:19111993@localhost:5432/restoran
+      - APP_PORT=8500
