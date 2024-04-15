@@ -11,23 +11,24 @@ import java.util.NoSuchElementException;
 @Service
 @AllArgsConstructor
 public class CoffeeService {
-    private final CoffeeRepository coffeeRepository ;
+    private final CoffeeRepository coffeeRepository;
 
-    public void save(Coffee coffee){
+    public void save(Coffee coffee) {
         coffeeRepository.save(coffee);
 
     }
 
-    public List<Coffee> findAll(Coffee coffee){
+    public List<Coffee> findAll(Coffee coffee) {
         return coffeeRepository.findAll();
     }
-    public Coffee getCoffeeById( Long id){
+
+    public Coffee getCoffeeById(Long id) {
         return coffeeRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Coffee with id " + id + " not found"));
     }
-    public void deleteById(Long id){
+
+    public void deleteById(Long id) {
         coffeeRepository.deleteById(id);
     }
-
 
 
 }

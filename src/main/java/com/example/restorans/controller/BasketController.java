@@ -31,8 +31,8 @@ public class BasketController {
     @GetMapping("/mylist")
     public String basket(Model model) {
         model.addAttribute("order", basketService.findAllBasketList(new Basket()));
-            BigDecimal totalCost = basketService.calculateTotalOrderCost();
-            model.addAttribute("totalCost", totalCost);
+        BigDecimal totalCost = basketService.calculateTotalOrderCost();
+        model.addAttribute("totalCost", totalCost);
 
         return "basketList";
     }

@@ -15,23 +15,21 @@ import java.util.List;
 @Setter
 @Getter
 public class BasketService {
-    private final BasketRepository basketRepository ;
+    private final BasketRepository basketRepository;
 
 
-
-    public void saveMyorder(Basket basket){
-    basketRepository.save(basket);
+    public void saveMyorder(Basket basket) {
+        basketRepository.save(basket);
     }
 
 
-    public List<Basket> findAllBasketList(Basket basket){
-    return basketRepository.findAll();
+    public List<Basket> findAllBasketList(Basket basket) {
+        return basketRepository.findAll();
     }
 
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
         basketRepository.deleteById(id);
     }
-
 
 
     private List<Basket> orders;

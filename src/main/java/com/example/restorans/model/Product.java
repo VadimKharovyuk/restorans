@@ -32,7 +32,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "coffee id")
-    private Coffee coffee ;
+    private Coffee coffee;
 
     @ManyToOne
     @JoinColumn(name = "dessert id")
@@ -41,13 +41,12 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "pervieBludo id")
-    private PervieBludo pervieBludo ;
-
+    private PervieBludo pervieBludo;
 
 
     @ManyToOne
     @JoinColumn(name = "ChildrenEat id")
-    private ChildrenEat childrenEat ;
+    private ChildrenEat childrenEat;
 
 
 }

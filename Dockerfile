@@ -1,7 +1,7 @@
 FROM openjdk:17
 
 WORKDIR /apprestoran
-ENV DATABASE_URL="jdbc:postgresql://localhost:5432/restoran"
+ENV DATABASE_URL="jdbc:postgresql://docker.for.mac.localhost:5432/restoran"
 ENV APP_PORT=8500
 
 
